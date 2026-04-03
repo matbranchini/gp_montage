@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -65,12 +65,12 @@
       <nav class="nav" aria-label="Principale">
         <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menu</button>
         <ul id="menu" class="nav__menu">
-          <li><a href="#servizi">Servizi</a></li>
-          <li><a href="#progetti">Progetti</a></li>
-          <li><a href="#chi-siamo">Chi siamo</a></li>
-          <li><a href="#attrezzature">Attrezzature</a></li>
-          <li><a href="#certificazioni">Certificazioni</a></li>
-          <li><a href="#contatti">Contatti</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="progetti.html">Progetti</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+          <li><a href="attrezzature.html">Attrezzature</a></li>
+          <li><a href="certificazioni.html">Certificazioni</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
         </ul>
       </nav>
     </div>
@@ -420,365 +420,83 @@
       </div>
     </section>
 
-    <!-- Progetti -->
+    <!-- Progetti (teaser) -->
     <section id="progetti" class="section section--alt" aria-labelledby="progetti-title">
-      <div class="container">
+      <div class="container teaser">
         <h2 id="progetti-title">Progetti</h2>
-        <div class="projects">
-
+        <p class="section__intro">Una selezione dei principali cantieri realizzati: facciate continue, curtain wall e strutture vetrate.</p>
+        <div class="projects projects--preview">
           <figure class="project">
-            <img src="assets/img/progetti/pilatus-arena.jpg" alt="Pilatus Arena &mdash; facciata continua" width="1200" height="800" loading="lazy" />
-            <figcaption>
-              <h3>Pilatus Arena</h3>
-              <p>Facciata continua e rivestimenti in vetro strutturale per l&rsquo;arena multifunzionale di Kriens.</p>
-            </figcaption>
+            <img src="assets/img/progetti/pilatus-arena.jpg" alt="Pilatus Arena" width="1200" height="800" loading="lazy" />
+            <figcaption><h3>Pilatus Arena</h3></figcaption>
           </figure>
-
           <figure class="project">
-            <img src="assets/img/progetti/stadio-lugano.jpg" alt="Stadio di Lugano &mdash; facciata" width="1200" height="800" loading="lazy" />
-            <figcaption>
-              <h3>Stadio Lugano</h3>
-              <p>Montaggio facciate e vetrate per il nuovo stadio calcistico di Lugano-Cornaredo.</p>
-            </figcaption>
+            <img src="assets/img/progetti/flughafen-zurich-b22.jpg" alt="Flughafen Z&uuml;rich B22" width="1200" height="800" loading="lazy" />
+            <figcaption><h3>Flughafen Z&uuml;rich B22</h3></figcaption>
           </figure>
-
           <figure class="project">
-            <img src="assets/img/progetti/malley-aire-b.jpg" alt="Malley Aire B &mdash; curtain wall" width="1200" height="800" loading="lazy" />
-            <figcaption>
-              <h3>Malley Aire B</h3>
-              <p>Curtain wall e rivestimenti di facciata per il complesso Malley Aire B a Losanna.</p>
-            </figcaption>
+            <img src="assets/img/progetti/fairmont-hotel.jpg" alt="Fairmont Hotel" width="1200" height="800" loading="lazy" />
+            <figcaption><h3>Fairmont Hotel</h3></figcaption>
           </figure>
-
-          <figure class="project">
-            <img src="assets/img/progetti/q34.jpg" alt="Q34 &mdash; facciata continua" width="1200" height="800" loading="lazy" />
-            <figcaption>
-              <h3>Q34</h3>
-              <p>Facciata continua e sistemi vetrati per il progetto residenziale e commerciale Q34.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="project">
-            <img src="assets/img/progetti/flughafen-zurich-b22.jpg" alt="Flughafen Z&uuml;rich B22 &mdash; facciata" width="1200" height="800" loading="lazy" />
-            <figcaption>
-              <h3>Flughafen Z&uuml;rich B22</h3>
-              <p>Facciate e strutture vetrate per l&rsquo;ampliamento del terminal B dell&rsquo;aeroporto di Zurigo.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="project">
-            <img src="assets/img/progetti/koch-areal.jpg" alt="Koch Areal &mdash; rivestimento facciata" width="1200" height="800" loading="lazy" />
-            <figcaption>
-              <h3>Koch Areal</h3>
-              <p>Rivestimenti di facciata e serramenti per il progetto urbano Koch Areal a Zurigo.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="project">
-            <img src="assets/img/progetti/fairmont-hotel.jpg" alt="Fairmont Hotel &mdash; facciata vetrata" width="1200" height="800" loading="lazy" />
-            <figcaption>
-              <h3>Fairmont Hotel</h3>
-              <p>Facciate vetrate e finiture di pregio per il Fairmont Hotel.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="project">
-            <img src="assets/img/progetti/virgin.jpg" alt="Virgin &mdash; facciata continua" width="1200" height="800" loading="lazy" />
-            <figcaption>
-              <h3>Virgin</h3>
-              <p>Facciata continua e vetrate strutturali per il progetto Virgin.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="project">
-            <img src="assets/img/progetti/snf-wankdorf.jpg" alt="SNF Wankdorf &mdash; curtain wall" width="1200" height="800" loading="lazy" />
-            <figcaption>
-              <h3>SNF Wankdorf</h3>
-              <p>Curtain wall e rivestimenti per il complesso SNF nel quartiere Wankdorf a Berna.</p>
-            </figcaption>
-          </figure>
-
         </div>
+        <a href="progetti.html" class="btn btn--primary teaser__cta">Scopri tutti i progetti &rarr;</a>
       </div>
     </section>
 
-    <!-- Chi siamo -->
+    <!-- Chi siamo (teaser) -->
     <section id="chi-siamo" class="section" aria-labelledby="chi-title">
-      <div class="container">
+      <div class="container teaser">
         <h2 id="chi-title">Chi siamo</h2>
         <p class="section__intro">
           GP Montage nasce dall&rsquo;esperienza sul campo in facciate continue e strutture vetrate. Operiamo con squadre qualificate, procedure
-          standardizzate e attenzione alla sicurezza, per garantire qualit&agrave;, tempi e costi sotto controllo.
+          standardizzate e attenzione alla sicurezza.
         </p>
         <ul class="ticks">
           <li>Squadre certificate e formate</li>
           <li>Piani di sicurezza e POS dedicati</li>
           <li>Controllo qualit&agrave; e tracciabilit&agrave;</li>
-          <li>Assistenza tecnica e rilievi</li>
         </ul>
-
-        <div class="ambiti-box">
-          <h3 class="ambiti-box__title">Ambiti di intervento</h3>
-          <ul class="ambiti-box__list">
-            <li>Edifici direzionali, retail, hospitality</li>
-            <li>Residenziale di pregio e riqualificazioni</li>
-            <li>Strutture sanitarie e scolastiche</li>
-            <li>Nuove costruzioni &amp; retrofit energetico</li>
-          </ul>
-        </div>
+        <a href="chi-siamo.html" class="btn btn--primary teaser__cta">Scopri di pi&ugrave; &rarr;</a>
       </div>
     </section>
 
-    <!-- Parco Attrezzi -->
+    <!-- Attrezzature (teaser) -->
     <section id="attrezzature" class="section section--alt" aria-labelledby="attrezzi-title">
-      <div class="container">
+      <div class="container teaser">
         <h2 id="attrezzi-title">Parco attrezzi</h2>
         <p class="section__intro">Disponiamo di attrezzature proprie, sempre revisionate e certificate, per operare in autonomia su ogni tipo di cantiere.</p>
-        <div class="equip-grid">
-
-          <div class="equip-card">
-            <div class="equip-card__icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="12" y="18" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
-                <circle cx="22" cy="46" r="5" stroke="currentColor" stroke-width="2"/>
-                <circle cx="42" cy="46" r="5" stroke="currentColor" stroke-width="2"/>
-                <path d="M18 32 h28" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
-                <circle cx="32" cy="24" r="3" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <h3 class="equip-card__title">Ventose per vetri</h3>
-            <p class="equip-card__desc">Ventose a batteria e pneumatiche per la movimentazione sicura di vetri camera, stratificati e pannelli di grande formato.</p>
-          </div>
-
-          <div class="equip-card">
-            <div class="equip-card__icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="12" y="18" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
-                <circle cx="22" cy="46" r="5" stroke="currentColor" stroke-width="2"/>
-                <circle cx="42" cy="46" r="5" stroke="currentColor" stroke-width="2"/>
-                <rect x="20" y="24" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="34" y="24" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <h3 class="equip-card__title">Ventose per pietra</h3>
-            <p class="equip-card__desc">Ventose specifiche per lastre in pietra naturale, gres porcellanato e materiali compositi pesanti. Portata fino a 600&nbsp;kg.</p>
-          </div>
-
-          <div class="equip-card">
-            <div class="equip-card__icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="16" y="22" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
-                <line x1="24" y1="46" x2="24" y2="54" stroke="currentColor" stroke-width="2"/>
-                <line x1="40" y1="46" x2="40" y2="54" stroke="currentColor" stroke-width="2"/>
-                <line x1="20" y1="54" x2="28" y2="54" stroke="currentColor" stroke-width="2"/>
-                <line x1="36" y1="54" x2="44" y2="54" stroke="currentColor" stroke-width="2"/>
-                <path d="M28 34 h8 M32 30 v8" stroke="currentColor" stroke-width="1.8"/>
-                <circle cx="32" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="32" y1="20" x2="32" y2="22" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <h3 class="equip-card__title">Robot posa vetri</h3>
-            <p class="equip-card__desc">Manipolatori robotizzati per la posa di vetri pesanti e di grandi dimensioni in quota, con precisione millimetrica e in totale sicurezza.</p>
-          </div>
-
-          <div class="equip-card">
-            <div class="equip-card__icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="24" width="44" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
-                <line x1="22" y1="38" x2="22" y2="44" stroke="currentColor" stroke-width="2"/>
-                <line x1="42" y1="38" x2="42" y2="44" stroke="currentColor" stroke-width="2"/>
-                <circle cx="18" cy="48" r="4" stroke="currentColor" stroke-width="2"/>
-                <circle cx="46" cy="48" r="4" stroke="currentColor" stroke-width="2"/>
-                <rect x="28" y="18" width="8" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="32" y1="14" x2="32" y2="18" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <h3 class="equip-card__title">Transpallet elettrico</h3>
-            <p class="equip-card__desc">Transpallet elettrici per la movimentazione di materiali pesanti in cantiere, cavalletti e casse vetro su superfici piane e rampe.</p>
-          </div>
-
-          <div class="equip-card">
-            <div class="equip-card__icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="8" y1="16" x2="56" y2="16" stroke="currentColor" stroke-width="2.5"/>
-                <rect x="14" y="16" width="4" height="32" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="46" y="16" width="4" height="32" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="26" y="20" width="12" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
-                <line x1="32" y1="30" x2="32" y2="40" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M26 40 h12" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="32" cy="44" r="3" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <h3 class="equip-card__title">Paranchi e monorail</h3>
-            <p class="equip-card__desc">Paranchi elettrici a catena e a fune con sistemi monorail per sollevamento e traslazione di carichi in quota lungo le facciate.</p>
-          </div>
-
-          <div class="equip-card">
-            <div class="equip-card__icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="32" cy="32" r="18" stroke="currentColor" stroke-width="2"/>
-                <circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="32" y1="14" x2="32" y2="20" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="32" y1="44" x2="32" y2="50" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="14" y1="32" x2="20" y2="32" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="44" y1="32" x2="50" y2="32" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M24 24 l4 4 M40 40 l-4-4 M40 24 l-4 4 M24 40 l4-4" stroke="currentColor" stroke-width="1.2"/>
-              </svg>
-            </div>
-            <h3 class="equip-card__title">Altre attrezzature</h3>
-            <p class="equip-card__desc">Trapani, avvitatori, silicone gun professionali, livelle laser, stazioni totali, utensili specifici per ogni esigenza di cantiere.</p>
-          </div>
-
-        </div>
+        <a href="attrezzature.html" class="btn btn--primary teaser__cta">Scopri le attrezzature &rarr;</a>
       </div>
     </section>
 
-    <!-- Certificazioni -->
-    <section id="certificazioni" class="section section--alt" aria-labelledby="cert-title">
-      <div class="container">
+    <!-- Certificazioni (teaser) -->
+    <section id="certificazioni" class="section" aria-labelledby="cert-title">
+      <div class="container teaser">
         <h2 id="cert-title">Certificazioni &amp; Sicurezza</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Qualit&agrave;</h3>
-            <p>Processi in linea con ISO 9001 per gestione commesse e controllo esecuzione.</p>
-          </article>
-          <article class="card">
-            <h3>Sicurezza</h3>
-            <p>Procedure di cantiere e DPI secondo D.Lgs. 81/08 e normative europee pertinenti.</p>
-          </article>
-          <article class="card">
-            <h3>Abilitazioni</h3>
-            <p>Operatori abilitati per piattaforme aeree, sollevamenti e lavori in quota.</p>
-          </article>
-        </div>
+        <p class="section__intro">Standard ISO, formazione SUVA, IPAF e patenti gru: i nostri operatori sono costantemente formati e certificati per garantire sicurezza in cantiere.</p>
+        <a href="certificazioni.html" class="btn btn--primary teaser__cta">Scopri di pi&ugrave; &rarr;</a>
       </div>
     </section>
 
-    <!-- Corsi di formazione -->
-    <section id="formazione" class="section" aria-labelledby="formazione-title">
-      <div class="container">
-        <h2 id="formazione-title">Formazione &amp; Certificazioni personale</h2>
-        <p class="section__intro">I nostri operatori sono costantemente formati e certificati secondo le normative vigenti per garantire sicurezza e professionalit&agrave; in cantiere.</p>
-        <div class="training-grid">
-          <div class="training-card">
-            <div class="training-card__icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="8" y="16" width="48" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
-                <path d="M8 28 h48" stroke="currentColor" stroke-width="2"/>
-                <circle cx="32" cy="38" r="6" stroke="currentColor" stroke-width="2"/>
-                <path d="M32 32 v-8 M28 20 h8" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <h3>SUVA</h3>
-            <p>Corsi di sicurezza SUVA per lavori in quota, protezione anticaduta e prevenzione infortuni in cantiere.</p>
-          </div>
-
-          <div class="training-card">
-            <div class="training-card__icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="12" y="32" width="40" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
-                <rect x="20" y="20" width="24" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
-                <line x1="32" y1="12" x2="32" y2="20" stroke="currentColor" stroke-width="2"/>
-                <circle cx="32" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
-                <line x1="16" y1="52" x2="16" y2="56" stroke="currentColor" stroke-width="2"/>
-                <line x1="48" y1="52" x2="48" y2="56" stroke="currentColor" stroke-width="2"/>
-                <circle cx="16" cy="58" r="2" fill="currentColor"/>
-                <circle cx="48" cy="58" r="2" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3>IPAF</h3>
-            <p>Certificazione IPAF per l'utilizzo di piattaforme aeree mobili (PLE) e sollevatori telescopici.</p>
-          </div>
-
-          <div class="training-card">
-            <div class="training-card__icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 12 L32 8 M28 12 L36 12" stroke="currentColor" stroke-width="2"/>
-                <rect x="28" y="12" width="8" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
-                <line x1="20" y1="28" x2="44" y2="28" stroke="currentColor" stroke-width="2"/>
-                <path d="M16 28 L12 44 L20 48" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M48 28 L52 44 L44 48" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <rect x="10" y="48" width="12" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
-                <rect x="42" y="48" width="12" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
-                <circle cx="16" cy="58" r="2" fill="currentColor"/>
-                <circle cx="48" cy="58" r="2" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3>Patenti gru</h3>
-            <p>Abilitazioni per la conduzione di gru a torre, autogru e gru mobili con relativa formazione continua.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contatti -->
-    <section id="contatti" class="section" aria-labelledby="contatti-title">
-      <div class="container">
+    <!-- Contatti (teaser) -->
+    <section id="contatti" class="section section--alt" aria-labelledby="contatti-title">
+      <div class="container teaser">
         <h2 id="contatti-title">Contatti</h2>
-        <div class="grid-2">
-          <!-- Form contatti -->
-          <form id="contact-form" name="contact" class="form" aria-label="Modulo contatti" method="POST" novalidate>
-            <input type="hidden" name="form-name" value="contact" />
-            <p class="hidden" aria-hidden="true">
-              <label>Non compilare: <input name="bot-field" /></label>
-            </p>
-            <div class="form__row">
-              <label for="nome">Nome e cognome</label>
-              <input id="nome" name="nome" type="text" placeholder="Nome e cognome" required />
-              <span class="error" aria-live="polite"></span>
-            </div>
-            <div class="form__row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="nome@azienda.com" required />
-              <span class="error" aria-live="polite"></span>
-            </div>
-            <div class="form__row">
-              <label for="telefono">Telefono</label>
-              <input id="telefono" name="telefono" type="tel" placeholder="+41 ..." />
-            </div>
-            <div class="form__row">
-              <label for="messaggio">Messaggio</label>
-              <textarea id="messaggio" name="messaggio" rows="5" placeholder="Raccontaci il tuo progetto" required></textarea>
-              <span class="error" aria-live="polite"></span>
-            </div>
-            <div class="form__row form__row--inline">
-              <label class="checkbox">
-                <input type="checkbox" id="privacy" required />
-                <span>Ho letto e accetto l&rsquo;<a href="#" class="privacy-link" onclick="document.getElementById('privacy-modal').classList.add('show');return false;">informativa privacy</a></span>
-              </label>
-            </div>
-            <button type="submit" class="btn btn--primary">Invia richiesta</button>
-            <p id="form-status" role="status" aria-live="polite"></p>
-          </form>
-
-          <div class="contact-box">
-            <h3>Sede &amp; recapiti</h3>
-            <p><strong>GP Montage SA</strong><br>
-               Via Cercera, 15<br>
-               6862 Rancate<br>
-               Tel.: <a href="tel:+41912615320">+41 91 261 53 20</a><br>
-               <a href="mailto:info@gpmontage.it">info@gpmontage.it</a></p>
-            <h4>Direttore</h4>
-            <p><strong>Paolo Branchini</strong><br>
-              Direttore<br>
-              M. <a href="tel:+41794891368">+41 79 489 13 68</a><br>
-              T. <a href="tel:+41912615320">+41 91 261 53 20</a><br>
-              <a href="mailto:p.branchini@gpmontage.ch">p.branchini@gpmontage.ch</a></p>
-            <h4>Orari</h4>
-            <p>Lun&ndash;Ven: 8:30&ndash;18:00</p>
-            <h4>Preventivi</h4>
-            <p>Invia layout, capitolato o indicazioni di massima: rispondiamo entro 24&ndash;48h.</p>
-            <h4>Seguici</h4>
-            <div class="social social--lg">
-              <a href="https://www.instagram.com/gp_montage_sa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social__link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/company/gp-montage-sa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social__link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-            </div>
-          </div>
+        <p class="section__intro">Scrivici per un preventivo, una consulenza o per qualsiasi informazione. Rispondiamo entro 24&ndash;48h.</p>
+        <div class="contact-box" style="max-width:520px;margin:24px auto 0;text-align:left;">
+          <h3>Sede &amp; recapiti</h3>
+          <p><strong>GP Montage SA</strong><br>
+             Via Cercera, 15<br>
+             6862 Rancate<br>
+             Tel.: <a href="tel:+41912615320">+41 91 261 53 20</a><br>
+             <a href="mailto:info@gpmontage.it">info@gpmontage.it</a></p>
+          <h4>Direttore</h4>
+          <p><strong>Paolo Branchini</strong><br>
+            M. <a href="tel:+41794891368">+41 79 489 13 68</a><br>
+            T. <a href="tel:+41912615320">+41 91 261 53 20</a><br>
+            <a href="mailto:p.branchini@gpmontage.ch">p.branchini@gpmontage.ch</a></p>
         </div>
+        <a href="contatti.html" class="btn btn--primary teaser__cta">Contattaci &rarr;</a>
       </div>
     </section>
   </main>
@@ -788,10 +506,10 @@
     <div class="container footer__inner">
       <p>&copy; <span id="year"></span> GP Montage SA &mdash; Rancate (CH)</p>
       <nav aria-label="Footer">
-        <a href="#chi-siamo">Chi siamo</a>
-        <a href="#servizi">Servizi</a>
-        <a href="#progetti">Progetti</a>
-        <a href="#contatti">Contatti</a>
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="index.html#servizi">Servizi</a>
+        <a href="progetti.html">Progetti</a>
+        <a href="contatti.html">Contatti</a>
         <a href="#" class="privacy-link" onclick="document.getElementById('privacy-modal').classList.add('show');return false;">Impressum &amp; Privacy</a>
       </nav>
       <div class="social">

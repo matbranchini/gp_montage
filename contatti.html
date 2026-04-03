@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contatti &mdash; GP Montage</title>
+  <meta name="description" content="Contatta GP Montage SA per preventivi, informazioni e collaborazioni. Sede a Rancate, Canton Ticino." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+
+  <header class="header header--visible header--subpage">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Homepage">
+        <img src="assets/img/gp_logo.png" alt="Logo GP Montage" width="120" height="30"/>
+      </a>
+      <nav class="nav" aria-label="Principale">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="nav__menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="progetti.html">Progetti</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+          <li><a href="attrezzature.html">Attrezzature</a></li>
+          <li><a href="certificazioni.html">Certificazioni</a></li>
+          <li><a href="contatti.html" class="active">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto" class="subpage">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contatti</h1>
+        <p class="section__intro">Scrivici per un preventivo, una consulenza o per qualsiasi informazione. Rispondiamo entro 24&ndash;48h.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <!-- Form contatti -->
+          <form id="contact-form" name="contact" class="form" aria-label="Modulo contatti" method="POST" novalidate>
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden" aria-hidden="true">
+              <label>Non compilare: <input name="bot-field" /></label>
+            </p>
+            <div class="form__row">
+              <label for="nome">Nome e cognome</label>
+              <input id="nome" name="nome" type="text" placeholder="Nome e cognome" required />
+              <span class="error" aria-live="polite"></span>
+            </div>
+            <div class="form__row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="nome@azienda.com" required />
+              <span class="error" aria-live="polite"></span>
+            </div>
+            <div class="form__row">
+              <label for="telefono">Telefono</label>
+              <input id="telefono" name="telefono" type="tel" placeholder="+41 ..." />
+            </div>
+            <div class="form__row">
+              <label for="messaggio">Messaggio</label>
+              <textarea id="messaggio" name="messaggio" rows="5" placeholder="Raccontaci il tuo progetto" required></textarea>
+              <span class="error" aria-live="polite"></span>
+            </div>
+            <div class="form__row form__row--inline">
+              <label class="checkbox">
+                <input type="checkbox" id="privacy" required />
+                <span>Ho letto e accetto l&rsquo;<a href="#" class="privacy-link" onclick="document.getElementById('privacy-modal').classList.add('show');return false;">informativa privacy</a></span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn--primary">Invia richiesta</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-box">
+            <h3>Sede &amp; recapiti</h3>
+            <p><strong>GP Montage SA</strong><br>
+               Via Cercera, 15<br>
+               6862 Rancate<br>
+               Tel.: <a href="tel:+41912615320">+41 91 261 53 20</a><br>
+               <a href="mailto:info@gpmontage.it">info@gpmontage.it</a></p>
+            <h4>Direttore</h4>
+            <p><strong>Paolo Branchini</strong><br>
+              Direttore<br>
+              M. <a href="tel:+41794891368">+41 79 489 13 68</a><br>
+              T. <a href="tel:+41912615320">+41 91 261 53 20</a><br>
+              <a href="mailto:p.branchini@gpmontage.ch">p.branchini@gpmontage.ch</a></p>
+            <h4>Orari</h4>
+            <p>Lun&ndash;Ven: 8:30&ndash;18:00</p>
+            <h4>Preventivi</h4>
+            <p>Invia layout, capitolato o indicazioni di massima: rispondiamo entro 24&ndash;48h.</p>
+            <h4>Seguici</h4>
+            <div class="social social--lg">
+              <a href="https://www.instagram.com/gp_montage_sa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social__link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/gp-montage-sa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social__link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> GP Montage SA &mdash; Rancate (CH)</p>
+      <nav aria-label="Footer">
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="index.html#servizi">Servizi</a>
+        <a href="progetti.html">Progetti</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="#" class="privacy-link" onclick="document.getElementById('privacy-modal').classList.add('show');return false;">Impressum &amp; Privacy</a>
+      </nav>
+      <div class="social">
+        <a href="https://www.instagram.com/gp_montage_sa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/gp-montage-sa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="privacy-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal__close" aria-label="Chiudi" onclick="this.closest('.modal-overlay').classList.remove('show')">&times;</button>
+      <div class="modal__body">
+        <h2 id="modal-title">Impressum</h2>
+        <p><strong>GP Montage SA</strong><br>Via Cercera 15<br>CH &ndash; 6862 Rancate<br>Svizzera</p>
+        <p>Telefono: <a href="tel:+41912615320">+41 91 261 53 20</a><br>Email: <a href="mailto:info@gpmontage.ch">info@gpmontage.ch</a><br>Sito web: <a href="https://www.gpmontage.ch" target="_blank" rel="noopener">www.gpmontage.ch</a></p>
+        <p>Forma giuridica: Societ&agrave; Anonima (SA)<br>Numero IDE / UID: CH&hyphen;501.3.024.559&hyphen;8<br>Iscrizione al Registro di Commercio: Canton Ticino</p>
+        <p><strong>Responsabile del contenuto:</strong><br>GP Montage SA</p>
+        <hr class="modal__divider">
+        <h2>Informativa sulla Privacy</h2>
+        <p>Il presente sito web &egrave; gestito da <strong>GP Montage SA</strong>, Via Cercera 15, CH&hyphen;6862 Rancate (Svizzera), UID: CH&hyphen;501.3.024.559&hyphen;8.</p>
+        <p>I dati personali forniti dagli utenti vengono trattati esclusivamente per rispondere alle richieste ricevute e per garantire il corretto funzionamento del sito.</p>
+        <p>Il trattamento avviene nel rispetto della Legge federale svizzera sulla protezione dei dati (nLPD).</p>
+        <p>Il sito utilizza solo cookie tecnici essenziali. Non vengono effettuate attivit&agrave; di profilazione o marketing senza il consenso dell&rsquo;utente.</p>
+        <p>I dati non vengono ceduti a terzi e sono conservati solo per il tempo necessario alle finalit&agrave; per cui sono stati raccolti.</p>
+        <p>L&rsquo;utente ha il diritto di accedere ai propri dati, chiederne la rettifica o la cancellazione scrivendo a <a href="mailto:info@gpmontage.ch">info@gpmontage.ch</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
