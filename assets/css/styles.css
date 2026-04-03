@@ -403,8 +403,8 @@ img{max-width:100%;height:auto}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:.7rem 1.2rem;border-radius:12px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:.2s;font-family:var(--font);font-weight:600;letter-spacing:.04em;font-size:14px}
-.btn--primary{background:var(--primary);color:#fff;border-color:var(--primary-700)}
-.btn--primary:hover{background:var(--primary-700)}
+.btn--primary{background:var(--primary-700);color:var(--primary);border-color:var(--primary-700)}
+.btn--primary:hover{background:var(--primary);color:#fff}
 .btn--light{background:transparent;border-color:rgba(255,255,255,.2);color:var(--text)}
 .btn--light:hover{background:rgba(255,255,255,.06)}
 
@@ -582,6 +582,30 @@ input:focus,textarea:focus{border-color:var(--primary)}
   .facade-detail{flex-direction:column;gap:16px;align-items:center;text-align:center}
   .facade-detail .ticks{text-align:left}
   .ambiti-box__list{grid-template-columns:1fr}
+
+  /* Projects: always show caption on mobile */
+  .project figcaption{
+    position:relative;
+    inset:auto;
+    opacity:1;
+    background:rgba(9,74,78,.9);
+    padding:14px 16px;
+  }
+  .project figcaption h3{
+    transform:none;
+    font-size:1rem;
+  }
+  .project figcaption p{
+    transform:none;
+    margin:6px 0 0;
+  }
+  .project img{
+    height:220px;
+  }
+  .project:hover img{
+    transform:none;
+    filter:none;
+  }
 }
 
 /* Subpages */
