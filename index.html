@@ -27,7 +27,7 @@
     "@type": "Organization",
     "name": "GP Montage",
     "url": "https://www.gpmontage.it",
-    "logo": "assets/img/logo.svg",
+    "logo": "assets/img/gp_logo.png",
     "description": "Azienda specializzata nel montaggio di facciate continue e strutture vetrate.",
     "address": {
       "@type": "PostalAddress",
@@ -52,7 +52,7 @@
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="#" aria-label="Homepage">
-        <img src="assets/img/logo.svg" alt="Logo GP Montage" width="120" height="30"/>
+        <img src="assets/img/gp_logo.png" alt="Logo GP Montage" width="120" height="30"/>
         <span>GP Montage</span>
       </a>
 
@@ -62,6 +62,7 @@
           <li><a href="#servizi">Servizi</a></li>
           <li><a href="#progetti">Progetti</a></li>
           <li><a href="#chi-siamo">Chi siamo</a></li>
+          <li><a href="#attrezzature">Attrezzature</a></li>
           <li><a href="#certificazioni">Certificazioni</a></li>
           <li><a href="#contatti">Contatti</a></li>
         </ul>
@@ -69,17 +70,143 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" role="banner" aria-label="Hero">
-    <picture>
-      <img src="assets/img/hero.jpg" alt="Facciata continua moderna in vetro e alluminio" width="1600" height="800" />
-    </picture>
-    <div class="hero__content container">
-      <h1>Facciate continue e strutture vetrate di precisione</h1>
-      <p>Dal rilievo alla posa in opera: squadre specializzate, sicurezza certificata e rispetto dei tempi.</p>
-      <div class="hero__cta">
-        <a class="btn btn--light" href="#progetti">Vedi progetti</a>
-        <a class="btn btn--primary" href="#contatti">Richiedi preventivo</a>
+  <!-- Hero fullscreen con logo GP centrato -->
+  <section class="hero-full" role="banner" aria-label="Hero">
+    <div class="hero-full__logo">
+      <img src="assets/img/gp_logo.png" alt="Logo GP Montage" class="hero-full__logo-img" />
+    </div>
+    <div class="hero-full__scroll" aria-hidden="true">
+      <span class="hero-full__scroll-text">Scroll</span>
+      <span class="hero-full__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- Gallery scorrimento progetti -->
+  <section class="gallery-strip" aria-label="Progetti in evidenza">
+    <div class="gallery-strip__track">
+      <!-- Set 1 -->
+      <div class="gallery-strip__item">
+        <img src="assets/img/progetto1.jpg" alt="Business Center, Milano" loading="lazy" />
+        <div class="gallery-strip__caption">Business Center — Milano</div>
+      </div>
+      <div class="gallery-strip__item">
+        <img src="assets/img/progetto2.jpg" alt="Pensilina vetrata, Torino" loading="lazy" />
+        <div class="gallery-strip__caption">Pensilina vetrata — Torino</div>
+      </div>
+      <div class="gallery-strip__item">
+        <img src="assets/img/progetto3.jpg" alt="Campus sanitario, Bologna" loading="lazy" />
+        <div class="gallery-strip__caption">Campus sanitario — Bologna</div>
+      </div>
+      <div class="gallery-strip__item">
+        <img src="assets/img/hero.jpg" alt="Facciata continua moderna" loading="lazy" />
+        <div class="gallery-strip__caption">Facciata continua — Progetto</div>
+      </div>
+      <!-- Set 2 (duplicato per loop infinito) -->
+      <div class="gallery-strip__item">
+        <img src="assets/img/progetto1.jpg" alt="Business Center, Milano" loading="lazy" />
+        <div class="gallery-strip__caption">Business Center — Milano</div>
+      </div>
+      <div class="gallery-strip__item">
+        <img src="assets/img/progetto2.jpg" alt="Pensilina vetrata, Torino" loading="lazy" />
+        <div class="gallery-strip__caption">Pensilina vetrata — Torino</div>
+      </div>
+      <div class="gallery-strip__item">
+        <img src="assets/img/progetto3.jpg" alt="Campus sanitario, Bologna" loading="lazy" />
+        <div class="gallery-strip__caption">Campus sanitario — Bologna</div>
+      </div>
+      <div class="gallery-strip__item">
+        <img src="assets/img/hero.jpg" alt="Facciata continua moderna" loading="lazy" />
+        <div class="gallery-strip__caption">Facciata continua — Progetto</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipi di facciate — icone cliccabili -->
+  <section class="facade-types" aria-label="Tipi di facciate">
+    <div class="container">
+      <h2 class="facade-types__title">Le nostre competenze</h2>
+      <p class="facade-types__subtitle">Clicca su un'icona per scoprire di più</p>
+      <div class="facade-types__grid">
+
+        <a href="#facciata-montante" class="facade-type">
+          <div class="facade-type__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="8" width="60" height="64" rx="3" stroke="currentColor" stroke-width="2"/>
+              <line x1="30" y1="8" x2="30" y2="72" stroke="currentColor" stroke-width="2"/>
+              <line x1="50" y1="8" x2="50" y2="72" stroke="currentColor" stroke-width="2"/>
+              <line x1="10" y1="28" x2="70" y2="28" stroke="currentColor" stroke-width="2"/>
+              <line x1="10" y1="48" x2="70" y2="48" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <span class="facade-type__label">Montante e traversi</span>
+        </a>
+
+        <a href="#facciata-cellule" class="facade-type">
+          <div class="facade-type__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="10" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="44" y="10" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="8" y="44" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="44" y="44" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="22" cy="23" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="58" cy="23" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="22" cy="57" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="58" cy="57" r="4" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <span class="facade-type__label">Facciate a cellule</span>
+        </a>
+
+        <a href="#facciata-nastro" class="facade-type">
+          <div class="facade-type__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="14" width="68" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="6" y="34" width="68" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="6" y="54" width="68" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+              <line x1="24" y1="14" x2="24" y2="28" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="42" y1="14" x2="42" y2="28" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="14" x2="60" y2="28" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="24" y1="34" x2="24" y2="48" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="42" y1="34" x2="42" y2="48" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="34" x2="60" y2="48" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="24" y1="54" x2="24" y2="68" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="42" y1="54" x2="42" y2="68" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="54" x2="60" y2="68" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <span class="facade-type__label">Serramenti a nastro</span>
+        </a>
+
+        <a href="#facciata-ventilata" class="facade-type">
+          <div class="facade-type__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="8" width="60" height="64" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="18" y="16" width="44" height="48" rx="2" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M28 40 Q34 34 40 40 Q46 46 52 40" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <path d="M28 50 Q34 44 40 50 Q46 56 52 50" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <path d="M28 30 Q34 24 40 30 Q46 36 52 30" stroke="currentColor" stroke-width="1.8" fill="none"/>
+            </svg>
+          </div>
+          <span class="facade-type__label">Facciate ventilate</span>
+        </a>
+
+        <a href="#facciata-prefabbricati" class="facade-type">
+          <div class="facade-type__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="64" height="64" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="16" y="16" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="rgba(57,189,248,0.08)"/>
+              <rect x="44" y="16" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="rgba(57,189,248,0.08)"/>
+              <rect x="16" y="44" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="rgba(57,189,248,0.08)"/>
+              <rect x="44" y="44" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="rgba(57,189,248,0.08)"/>
+              <line x1="26" y1="36" x2="26" y2="44" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="54" y1="36" x2="54" y2="44" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="36" y1="26" x2="44" y2="26" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="36" y1="54" x2="44" y2="54" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <span class="facade-type__label">Prefabbricati architettonici</span>
+        </a>
+
       </div>
     </div>
   </section>
@@ -107,44 +234,143 @@
       </div>
     </section>
 
-    <!-- Servizi -->
+    <!-- Servizi / Tipi di facciate dettaglio -->
     <section id="servizi" class="section" aria-labelledby="servizi-title">
       <div class="container">
-        <h2 id="servizi-title">Servizi</h2>
+        <h2 id="servizi-title">I nostri servizi</h2>
         <p class="section__intro">
           Montaggio professionale di facciate continue, curtain wall, rivestimenti e strutture vetrate per edilizia commerciale, terziaria e residenziale.
         </p>
-        <div class="cards">
-          <article class="card">
-            <h3>Facciate continue (Curtain Wall)</h3>
-            <p>Posa in opera di sistemi stick, semi‑strutturali e strutturali, gestione tolleranze, sigillature, collaudi e controllo qualità.</p>
-            <ul class="list">
-              <li>Staffe, montanti e traversi</li>
-              <li>Vetrazione e sigillature strutturali</li>
-              <li>Tenuta aria/acqua/vento</li>
-            </ul>
-          </article>
 
-          <article class="card">
-            <h3>Strutture vetrate & facciate ventilate</h3>
-            <p>Installazione vetri camera, stratificati, serigrafati, parapetti e rivestimenti con ancoraggi certificati.</p>
-            <ul class="list">
-              <li>Canopy, pensiline, lucernari</li>
-              <li>Parapetti in vetro e balaustre</li>
-              <li>Rivestimenti compositi</li>
+        <!-- Montante e traversi -->
+        <article id="facciata-montante" class="facade-detail">
+          <div class="facade-detail__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="8" width="60" height="64" rx="3" stroke="currentColor" stroke-width="2"/>
+              <line x1="30" y1="8" x2="30" y2="72" stroke="currentColor" stroke-width="2"/>
+              <line x1="50" y1="8" x2="50" y2="72" stroke="currentColor" stroke-width="2"/>
+              <line x1="10" y1="28" x2="70" y2="28" stroke="currentColor" stroke-width="2"/>
+              <line x1="10" y1="48" x2="70" y2="48" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="facade-detail__content">
+            <h3>Montante e traversi</h3>
+            <p>Sistema di facciata continua "stick" composto da montanti verticali e traversi orizzontali assemblati direttamente in cantiere. La soluzione più diffusa e flessibile, ideale per geometrie complesse e grandi superfici vetrate.</p>
+            <ul class="ticks">
+              <li>Montaggio di profili in alluminio montanti e traversi</li>
+              <li>Posa vetri e pannelli opachi con sigillature strutturali</li>
+              <li>Regolazione tolleranze e allineamento in quota</li>
+              <li>Test di tenuta aria, acqua e vento</li>
             </ul>
-          </article>
+          </div>
+        </article>
 
-          <article class="card">
-            <h3>Project & Site Management</h3>
-            <p>Assistenza tecnica in cantiere, coordinamento squadre, piani di sicurezza, cronoprogramma e SAL.</p>
-            <ul class="list">
-              <li>Rilievi e as‑built</li>
-              <li>Gestione fornitori e logistica</li>
-              <li>Collaudi finali</li>
+        <!-- Facciate a cellule -->
+        <article id="facciata-cellule" class="facade-detail">
+          <div class="facade-detail__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="10" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="44" y="10" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="8" y="44" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="44" y="44" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="22" cy="23" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="58" cy="23" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="22" cy="57" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="58" cy="57" r="4" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="facade-detail__content">
+            <h3>Facciate a cellule</h3>
+            <p>Moduli prefabbricati in officina, completi di vetro e pannellatura, agganciati alla struttura portante dell'edificio. Massima velocità di posa, qualità controllata in stabilimento e riduzione dei tempi di cantiere.</p>
+            <ul class="ticks">
+              <li>Installazione moduli unitized con agganci meccanici</li>
+              <li>Sollevamento e posizionamento con ventose e gru</li>
+              <li>Sigillature perimetrali e giunti di dilatazione</li>
+              <li>Ideale per edifici multipiano e grattacieli</li>
             </ul>
-          </article>
-        </div>
+          </div>
+        </article>
+
+        <!-- Serramenti a nastro -->
+        <article id="facciata-nastro" class="facade-detail">
+          <div class="facade-detail__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="14" width="68" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="6" y="34" width="68" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="6" y="54" width="68" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+              <line x1="24" y1="14" x2="24" y2="28" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="42" y1="14" x2="42" y2="28" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="14" x2="60" y2="28" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="24" y1="34" x2="24" y2="48" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="42" y1="34" x2="42" y2="48" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="34" x2="60" y2="48" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="24" y1="54" x2="24" y2="68" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="42" y1="54" x2="42" y2="68" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="60" y1="54" x2="60" y2="68" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="facade-detail__content">
+            <h3>Serramenti a nastro</h3>
+            <p>Finestre continue disposte orizzontalmente lungo il perimetro dell'edificio, creando fasce vetrate uniformi. Soluzione elegante che massimizza l'ingresso di luce naturale mantenendo la continuità architettonica.</p>
+            <ul class="ticks">
+              <li>Posa serramenti in sequenza con telaio continuo</li>
+              <li>Integrazione con sistemi di oscuramento e ventilazione</li>
+              <li>Sigillature e raccordi con la struttura portante</li>
+              <li>Perfetta per edifici residenziali e terziario</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Facciate ventilate -->
+        <article id="facciata-ventilata" class="facade-detail">
+          <div class="facade-detail__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="8" width="60" height="64" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="18" y="16" width="44" height="48" rx="2" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M28 40 Q34 34 40 40 Q46 46 52 40" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <path d="M28 50 Q34 44 40 50 Q46 56 52 50" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <path d="M28 30 Q34 24 40 30 Q46 36 52 30" stroke="currentColor" stroke-width="1.8" fill="none"/>
+            </svg>
+          </div>
+          <div class="facade-detail__content">
+            <h3>Facciate ventilate</h3>
+            <p>Rivestimento esterno con intercapedine d'aria ventilata tra il pannello e la parete. Soluzione ad alte prestazioni energetiche che protegge l'edificio e ne migliora l'estetica con materiali di pregio.</p>
+            <ul class="ticks">
+              <li>Montaggio sottostruttura e staffe di ancoraggio</li>
+              <li>Posa pannelli in gres, composito, pietra o metallo</li>
+              <li>Camera d'aria ventilata per isolamento termico</li>
+              <li>Finiture architettoniche personalizzate</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Prefabbricati architettonici -->
+        <article id="facciata-prefabbricati" class="facade-detail">
+          <div class="facade-detail__icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="64" height="64" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="16" y="16" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="rgba(57,189,248,0.08)"/>
+              <rect x="44" y="16" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="rgba(57,189,248,0.08)"/>
+              <rect x="16" y="44" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="rgba(57,189,248,0.08)"/>
+              <rect x="44" y="44" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="rgba(57,189,248,0.08)"/>
+              <line x1="26" y1="36" x2="26" y2="44" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="54" y1="36" x2="54" y2="44" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="36" y1="26" x2="44" y2="26" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="36" y1="54" x2="44" y2="54" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="facade-detail__content">
+            <h3>Prefabbricati architettonici</h3>
+            <p>Elementi strutturali e di rivestimento in calcestruzzo architettonico, GRC o materiali compositi, prodotti in stabilimento e assemblati in cantiere. Precisione millimetrica e finitura controllata per facciate di grande impatto visivo.</p>
+            <ul class="ticks">
+              <li>Posa e fissaggio elementi prefabbricati con ancoraggi dedicati</li>
+              <li>Sigillature elastiche tra elementi e struttura</li>
+              <li>Coordinamento logistico e sollevamenti con autogrù</li>
+              <li>Perfetto per architetture contemporanee e monumentali</li>
+            </ul>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -204,6 +430,110 @@
             <li>Strutture sanitarie e scolastiche</li>
             <li>Nuove costruzioni & retrofit energetico</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parco Attrezzi -->
+    <section id="attrezzature" class="section section--alt" aria-labelledby="attrezzi-title">
+      <div class="container">
+        <h2 id="attrezzi-title">Parco attrezzi</h2>
+        <p class="section__intro">Disponiamo di attrezzature proprie, sempre revisionate e certificate, per operare in autonomia su ogni tipo di cantiere.</p>
+        <div class="equip-grid">
+
+          <div class="equip-card">
+            <div class="equip-card__icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="18" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+                <circle cx="22" cy="46" r="5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="42" cy="46" r="5" stroke="currentColor" stroke-width="2"/>
+                <path d="M18 32 h28" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <circle cx="32" cy="24" r="3" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="equip-card__title">Ventose per vetri</h3>
+            <p class="equip-card__desc">Ventose a batteria e pneumatiche per la movimentazione sicura di vetri camera, stratificati e pannelli di grande formato.</p>
+          </div>
+
+          <div class="equip-card">
+            <div class="equip-card__icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="18" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+                <circle cx="22" cy="46" r="5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="42" cy="46" r="5" stroke="currentColor" stroke-width="2"/>
+                <rect x="20" y="24" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="34" y="24" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="equip-card__title">Ventose per pietra</h3>
+            <p class="equip-card__desc">Ventose specifiche per lastre in pietra naturale, gres porcellanato e materiali compositi pesanti. Portata fino a 600 kg.</p>
+          </div>
+
+          <div class="equip-card">
+            <div class="equip-card__icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="16" y="22" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+                <line x1="24" y1="46" x2="24" y2="54" stroke="currentColor" stroke-width="2"/>
+                <line x1="40" y1="46" x2="40" y2="54" stroke="currentColor" stroke-width="2"/>
+                <line x1="20" y1="54" x2="28" y2="54" stroke="currentColor" stroke-width="2"/>
+                <line x1="36" y1="54" x2="44" y2="54" stroke="currentColor" stroke-width="2"/>
+                <path d="M28 34 h8 M32 30 v8" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="32" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="32" y1="20" x2="32" y2="22" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="equip-card__title">Robot posa vetri</h3>
+            <p class="equip-card__desc">Manipolatori robotizzati per la posa di vetri pesanti e di grandi dimensioni in quota, con precisione millimetrica e in totale sicurezza.</p>
+          </div>
+
+          <div class="equip-card">
+            <div class="equip-card__icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="24" width="44" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+                <line x1="22" y1="38" x2="22" y2="44" stroke="currentColor" stroke-width="2"/>
+                <line x1="42" y1="38" x2="42" y2="44" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="48" r="4" stroke="currentColor" stroke-width="2"/>
+                <circle cx="46" cy="48" r="4" stroke="currentColor" stroke-width="2"/>
+                <rect x="28" y="18" width="8" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="32" y1="14" x2="32" y2="18" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="equip-card__title">Transpallet elettrico</h3>
+            <p class="equip-card__desc">Transpallet elettrici per la movimentazione di materiali pesanti in cantiere, cavalletti e casse vetro su superfici piane e rampe.</p>
+          </div>
+
+          <div class="equip-card">
+            <div class="equip-card__icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="8" y1="16" x2="56" y2="16" stroke="currentColor" stroke-width="2.5"/>
+                <rect x="14" y="16" width="4" height="32" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="46" y="16" width="4" height="32" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="26" y="20" width="12" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                <line x1="32" y1="30" x2="32" y2="40" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M26 40 h12" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="32" cy="44" r="3" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="equip-card__title">Paranchi e monorail</h3>
+            <p class="equip-card__desc">Paranchi elettrici a catena e a fune con sistemi monorail per sollevamento e traslazione di carichi in quota lungo le facciate.</p>
+          </div>
+
+          <div class="equip-card">
+            <div class="equip-card__icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="18" stroke="currentColor" stroke-width="2"/>
+                <circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="32" y1="14" x2="32" y2="20" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="32" y1="44" x2="32" y2="50" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="14" y1="32" x2="20" y2="32" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="44" y1="32" x2="50" y2="32" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M24 24 l4 4 M40 40 l-4-4 M40 24 l-4 4 M24 40 l4-4" stroke="currentColor" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <h3 class="equip-card__title">Altre attrezzature</h3>
+            <p class="equip-card__desc">Trapani, avvitatori, silicone gun professionali, livelle laser, stazioni totali, utensili specifici per ogni esigenza di cantiere.</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -279,6 +609,15 @@
             <p>Lun–Ven: 8:30–18:00</p>
             <h4>Preventivi</h4>
             <p>Invia layout, capitolato o indicazioni di massima: rispondiamo entro 24–48h.</p>
+            <h4>Seguici</h4>
+            <div class="social social--lg">
+              <a href="https://www.instagram.com/xxxx_instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social__link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/yyy_linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social__link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -296,6 +635,14 @@
         <a href="#contatti">Contatti</a>
         <a href="#" aria-disabled="true" onclick="alert('Aggiungi pagina privacy se necessario')">Privacy</a>
       </nav>
+      <div class="social">
+        <a href="https://www.instagram.com/xxxx_instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/yyy_linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
 

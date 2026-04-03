@@ -12,7 +12,31 @@ if (toggle && menu) {
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Form validation + optional mailto fallback
+// Scroll indicator — click to scroll down to gallery
+const scrollIndicator = document.querySelector('.hero-full__scroll');
+if (scrollIndicator) {
+  scrollIndicator.style.cursor = 'pointer';
+  scrollIndicator.addEventListener('click', () => {
+    const gallery = document.querySelector('.gallery-strip');
+    if (gallery) gallery.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
+// Header: hide on hero, show on scroll
+const header = document.querySelector('.header');
+if (header) {
+  const onScroll = () => {
+    if (window.scrollY > window.innerHeight * 0.5) {
+      header.classList.add('header--visible');
+    } else {
+      header.classList.remove('header--visible');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+// Form validation + mailto to info@gpmontage.it
 const form = document.getElementById('contact-form');
 const statusEl = document.getElementById('form-status');
 
@@ -21,10 +45,11 @@ function validateEmail(value) {
 }
 
 if (form) {
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     const nome = form.nome.value.trim();
     const email = form.email.value.trim();
+    const telefono = form.telefono.value.trim();
     const messaggio = form.messaggio.value.trim();
     const privacy = document.getElementById('privacy').checked;
 
@@ -32,6 +57,8 @@ if (form) {
 
     // Reset errors
     form.querySelectorAll('.error').forEach(el => el.textContent = '');
+    statusEl.textContent = '';
+    statusEl.style.color = '';
 
     if (!nome) {
       form.querySelector('#nome + .error').textContent = 'Inserisci il nome';
@@ -47,39 +74,23 @@ if (form) {
     }
     if (!privacy) {
       statusEl.textContent = 'Devi accettare la privacy';
+      statusEl.style.color = 'var(--danger)';
       valid = false;
-    } else {
-      statusEl.textContent = '';
     }
 
     if (!valid) return;
 
-    // Try Netlify default submit first
-    try {
-      const formData = new FormData(form);
-      const resp = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
-      });
-      statusEl.textContent = 'Grazie! Richiesta inviata con successo.';
-      form.reset();
-      return;
-    } catch (err) {
-      console.warn('Netlify submit fallito, uso mailto fallback', err);
-    }
-
-    // Fallback: email via mailto (apre client email dell'utente)
-    const subject = encodeURIComponent('Richiesta dal sito GP Montage');
+    // Componi e invia email a info@gpmontage.it
+    const subject = encodeURIComponent('Richiesta preventivo dal sito GP Montage');
     const body = encodeURIComponent(
-      `Nome: ${nome}
-Email: ${email}
-Telefono: ${form.telefono.value}
-
-Messaggio:
-${messaggio}`
+      'Nome: ' + nome + '\n' +
+      'Email: ' + email + '\n' +
+      'Telefono: ' + (telefono || 'Non indicato') + '\n\n' +
+      'Messaggio:\n' + messaggio
     );
-    window.location.href = `mailto:info@gpmontage.it?subject=${subject}&body=${body}`;
-    statusEl.textContent = 'Grazie! Stiamo preparando l’email...';
+    window.location.href = 'mailto:info@gpmontage.it?subject=' + subject + '&body=' + body;
+
+    statusEl.textContent = 'Grazie! Si sta aprendo il tuo client email...';
+    statusEl.style.color = 'var(--ok)';
   });
 }
