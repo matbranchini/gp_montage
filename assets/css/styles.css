@@ -618,8 +618,8 @@ input:focus,textarea:focus{border-color:var(--primary)}
   padding-top:0;
 }
 .page-hero{
-  padding:80px 0 48px;
-  background:linear-gradient(135deg,var(--primary-700) 0%,var(--bg) 100%);
+  padding:28px 0 16px;
+  background:linear-gradient(135deg,rgba(9,74,78,.25) 0%,var(--bg) 100%);
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 .page-hero h1{
