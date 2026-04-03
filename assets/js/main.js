@@ -12,13 +12,20 @@ if (toggle && menu) {
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Scroll indicator — click to scroll down to gallery
+// Scroll indicator — click to scroll down to gallery (clear header)
 const scrollIndicator = document.querySelector('.hero-full__scroll');
 if (scrollIndicator) {
   scrollIndicator.style.cursor = 'pointer';
   scrollIndicator.addEventListener('click', () => {
     const gallery = document.querySelector('.gallery-strip');
-    if (gallery) gallery.scrollIntoView({ behavior: 'smooth' });
+    const hdr = document.querySelector('.header');
+    if (gallery) {
+      // Force header visible so we can measure it
+      if (hdr) hdr.classList.add('header--visible');
+      const headerH = hdr ? hdr.offsetHeight + 8 : 0; // +8 breathing room
+      const y = gallery.getBoundingClientRect().top + window.pageYOffset - headerH;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   });
 }
 
@@ -92,5 +99,18 @@ if (form) {
 
     statusEl.textContent = 'Grazie! Si sta aprendo il tuo client email...';
     statusEl.style.color = 'var(--ok)';
+  });
+}
+
+// Privacy modal — close on overlay click or Escape
+const privacyModal = document.getElementById('privacy-modal');
+if (privacyModal) {
+  privacyModal.addEventListener('click', (e) => {
+    if (e.target === privacyModal) privacyModal.classList.remove('show');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && privacyModal.classList.contains('show')) {
+      privacyModal.classList.remove('show');
+    }
   });
 }
