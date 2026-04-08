@@ -12,6 +12,12 @@ if (toggle && menu) {
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Carousel touch pause (mobile)
+document.querySelectorAll('.logo-carousel__track').forEach(function(track){
+  track.addEventListener('touchstart',function(){track.style.animationPlayState='paused';},{passive:true});
+  track.addEventListener('touchend',function(){track.style.animationPlayState='running';},{passive:true});
+});
+
 // Scroll indicator — click to scroll down to gallery (clear header)
 const scrollIndicator = document.querySelector('.hero-full__scroll');
 if (scrollIndicator) {
@@ -123,8 +129,10 @@ if (equipLightbox) {
   const lbPrev = equipLightbox.querySelector('.equip-lightbox__prev');
   const lbNext = equipLightbox.querySelector('.equip-lightbox__next');
   const lbClose = equipLightbox.querySelector('.equip-lightbox__close');
+  const lbContent = equipLightbox.querySelector('.equip-lightbox__content');
   let currentImages = [];
   let currentIndex = 0;
+  let justOpened = false;
 
   function showImage(index) {
     currentIndex = index;
@@ -134,18 +142,21 @@ if (equipLightbox) {
   }
 
   document.querySelectorAll('.equip-card--clickable').forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       try {
         currentImages = JSON.parse(card.dataset.images);
       } catch { return; }
       if (!currentImages.length) return;
       lbCaption.textContent = card.dataset.label || '';
-      // Apply custom background if specified (e.g. white for images with transparency)
       const imgBg = card.dataset.imgbg || 'transparent';
       lbImg.style.background = imgBg;
       showImage(0);
+      justOpened = true;
       equipLightbox.classList.add('show');
       document.body.style.overflow = 'hidden';
+      setTimeout(() => { justOpened = false; }, 300);
     });
   });
 
@@ -155,10 +166,14 @@ if (equipLightbox) {
     lbImg.src = '';
   }
 
-  lbClose.addEventListener('click', closeLightbox);
+  lbClose.addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
   equipLightbox.addEventListener('click', (e) => {
+    if (justOpened) return;
+    // Only close if clicking the overlay itself, not the content
     if (e.target === equipLightbox) closeLightbox();
   });
+  // Prevent clicks on content from bubbling to overlay
+  if (lbContent) lbContent.addEventListener('click', (e) => { e.stopPropagation(); });
   lbPrev.addEventListener('click', (e) => { e.stopPropagation(); if (currentIndex > 0) showImage(currentIndex - 1); });
   lbNext.addEventListener('click', (e) => { e.stopPropagation(); if (currentIndex < currentImages.length - 1) showImage(currentIndex + 1); });
 
@@ -176,15 +191,21 @@ if (certLightbox) {
   const cImg = certLightbox.querySelector('.equip-lightbox__img');
   const cCaption = certLightbox.querySelector('.equip-lightbox__caption');
   const cClose = certLightbox.querySelector('.equip-lightbox__close');
+  const cContent = certLightbox.querySelector('.equip-lightbox__content');
+  let certJustOpened = false;
 
   document.querySelectorAll('.cert-card--clickable').forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       const src = card.dataset.certImg;
       if (!src) return;
       cImg.src = src;
       cCaption.textContent = card.dataset.certLabel || '';
+      certJustOpened = true;
       certLightbox.classList.add('show');
       document.body.style.overflow = 'hidden';
+      setTimeout(() => { certJustOpened = false; }, 300);
     });
   });
 
@@ -194,10 +215,12 @@ if (certLightbox) {
     cImg.src = '';
   }
 
-  cClose.addEventListener('click', closeCert);
+  cClose.addEventListener('click', (e) => { e.stopPropagation(); closeCert(); });
   certLightbox.addEventListener('click', (e) => {
+    if (certJustOpened) return;
     if (e.target === certLightbox) closeCert();
   });
+  if (cContent) cContent.addEventListener('click', (e) => { e.stopPropagation(); });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && certLightbox.classList.contains('show')) closeCert();
   });
