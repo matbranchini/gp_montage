@@ -114,3 +114,91 @@ if (privacyModal) {
     }
   });
 }
+
+// Equipment lightbox
+const equipLightbox = document.getElementById('equip-lightbox');
+if (equipLightbox) {
+  const lbImg = equipLightbox.querySelector('.equip-lightbox__img');
+  const lbCaption = equipLightbox.querySelector('.equip-lightbox__caption');
+  const lbPrev = equipLightbox.querySelector('.equip-lightbox__prev');
+  const lbNext = equipLightbox.querySelector('.equip-lightbox__next');
+  const lbClose = equipLightbox.querySelector('.equip-lightbox__close');
+  let currentImages = [];
+  let currentIndex = 0;
+
+  function showImage(index) {
+    currentIndex = index;
+    lbImg.src = currentImages[index];
+    lbPrev.classList.toggle('hidden', index === 0);
+    lbNext.classList.toggle('hidden', index === currentImages.length - 1);
+  }
+
+  document.querySelectorAll('.equip-card--clickable').forEach(card => {
+    card.addEventListener('click', () => {
+      try {
+        currentImages = JSON.parse(card.dataset.images);
+      } catch { return; }
+      if (!currentImages.length) return;
+      lbCaption.textContent = card.dataset.label || '';
+      // Apply custom background if specified (e.g. white for images with transparency)
+      const imgBg = card.dataset.imgbg || 'transparent';
+      lbImg.style.background = imgBg;
+      showImage(0);
+      equipLightbox.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    equipLightbox.classList.remove('show');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  lbClose.addEventListener('click', closeLightbox);
+  equipLightbox.addEventListener('click', (e) => {
+    if (e.target === equipLightbox) closeLightbox();
+  });
+  lbPrev.addEventListener('click', (e) => { e.stopPropagation(); if (currentIndex > 0) showImage(currentIndex - 1); });
+  lbNext.addEventListener('click', (e) => { e.stopPropagation(); if (currentIndex < currentImages.length - 1) showImage(currentIndex + 1); });
+
+  document.addEventListener('keydown', (e) => {
+    if (!equipLightbox.classList.contains('show')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft' && currentIndex > 0) showImage(currentIndex - 1);
+    if (e.key === 'ArrowRight' && currentIndex < currentImages.length - 1) showImage(currentIndex + 1);
+  });
+}
+
+// Certification lightbox
+const certLightbox = document.getElementById('cert-lightbox');
+if (certLightbox) {
+  const cImg = certLightbox.querySelector('.equip-lightbox__img');
+  const cCaption = certLightbox.querySelector('.equip-lightbox__caption');
+  const cClose = certLightbox.querySelector('.equip-lightbox__close');
+
+  document.querySelectorAll('.cert-card--clickable').forEach(card => {
+    card.addEventListener('click', () => {
+      const src = card.dataset.certImg;
+      if (!src) return;
+      cImg.src = src;
+      cCaption.textContent = card.dataset.certLabel || '';
+      certLightbox.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeCert() {
+    certLightbox.classList.remove('show');
+    document.body.style.overflow = '';
+    cImg.src = '';
+  }
+
+  cClose.addEventListener('click', closeCert);
+  certLightbox.addEventListener('click', (e) => {
+    if (e.target === certLightbox) closeCert();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certLightbox.classList.contains('show')) closeCert();
+  });
+}
