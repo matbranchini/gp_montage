@@ -947,6 +947,29 @@ input:focus,textarea:focus{border-color:var(--primary)}
 .footer a{color:var(--muted);text-decoration:none;margin-right:12px}
 .footer a:hover{color:var(--text)}
 
+/* Swiss Map */
+.swiss-map{max-width:920px;margin:2.5rem auto 0;position:relative}
+.swiss-map__svg{width:100%;height:auto;overflow:visible;display:block;font-family:var(--font)}
+.swiss-map__country{fill:url(#countryGrad);stroke:rgba(64,186,184,.4);stroke-width:1.8;stroke-linejoin:round}
+.swiss-map__lake{fill:rgba(64,186,184,.1);stroke:rgba(64,186,184,.18);stroke-width:.7}
+.swiss-map__dot{fill:#40bab8;stroke:#222428;stroke-width:2;transition:fill .25s}
+.swiss-map__dot--hq{fill:#fff;stroke:#40bab8;stroke-width:2.5}
+.swiss-map__pulse{fill:rgba(64,186,184,.3);transform-origin:center;transform-box:fill-box;animation:mapPulse 2.5s ease-out infinite}
+.swiss-map__pulse--hq{fill:rgba(255,255,255,.2)}
+@keyframes mapPulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(3);opacity:0}}
+.swiss-map__pin{cursor:default}
+.swiss-map__pin:hover .swiss-map__dot{fill:#5de0de}
+.swiss-map__city-name{fill:#e8edf2;font-size:13px;font-weight:700;letter-spacing:.4px}
+.swiss-map__city-name--hq{fill:#40bab8}
+.swiss-map__project-name{fill:rgba(179,192,207,.75);font-size:11px;font-weight:400;letter-spacing:.2px}
+.swiss-map__pin:hover .swiss-map__city-name{fill:#fff}
+.swiss-map__pin:hover .swiss-map__project-name{fill:#e8edf2}
+.swiss-map__legend{display:flex;justify-content:center;gap:28px;margin-top:1.5rem;font-size:13px;color:var(--muted)}
+.swiss-map__legend-item{display:flex;align-items:center;gap:8px}
+.swiss-map__legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.swiss-map__legend-dot--project{background:#40bab8;box-shadow:0 0 6px rgba(64,186,184,.5)}
+.swiss-map__legend-dot--hq{background:#fff;border:2px solid #40bab8;box-shadow:0 0 6px rgba(255,255,255,.3)}
+
 /* Responsive */
 @media (max-width: 990px){
   .cards,.projects,.equip-grid,.training-grid{grid-template-columns:1fr 1fr}
@@ -965,6 +988,13 @@ input:focus,textarea:focus{border-color:var(--primary)}
   .facade-detail{flex-direction:column;gap:16px;align-items:center;text-align:center}
   .facade-detail .ticks{text-align:left}
   .ambiti-box__list{grid-template-columns:1fr}
+
+  /* Swiss map mobile */
+  .swiss-map__city-name{font-size:16px}
+  .swiss-map__project-name{font-size:13px}
+  .swiss-map__dot{stroke-width:2.5}
+  .swiss-map__dot--hq{stroke-width:3}
+  .swiss-map__legend{flex-direction:column;align-items:center;gap:12px}
 
   /* Carousel mobile fix */
   .logo-carousel{
