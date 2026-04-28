@@ -12,10 +12,12 @@ if (toggle && menu) {
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Competenze: toggle project thumbnails on click
+// Competenze: toggle project thumbnails on click/tap
 document.querySelectorAll('.facade-type').forEach(function(ft){
   ft.addEventListener('click',function(e){
     if(e.target.closest('.facade-type__thumb')) return; // let link work
+    e.preventDefault();
+    e.stopPropagation();
     var wasActive = ft.classList.contains('facade-type--active');
     document.querySelectorAll('.facade-type--active').forEach(function(el){el.classList.remove('facade-type--active');});
     if(!wasActive) ft.classList.add('facade-type--active');

@@ -1040,6 +1040,14 @@ input:focus,textarea:focus{border-color:var(--primary)}
   .cards,.projects,.equip-grid,.training-grid{grid-template-columns:1fr}
   .facade-types__grid{gap:20px}
   .facade-type__icon{width:64px;height:64px;padding:13px}
+  .facade-type:hover{transform:none}
+  .facade-type__projects{
+    position:relative;
+    width:100%;
+    max-width:280px;
+  }
+  .facade-type__thumb img{width:44px;height:44px}
+  .facade-type__thumb span{font-size:9px;max-width:56px}
   .facade-detail{flex-direction:column;gap:16px;align-items:center;text-align:center}
   .facade-detail .ticks{text-align:left}
   .ambiti-box__list{grid-template-columns:1fr}
