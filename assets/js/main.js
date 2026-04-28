@@ -12,6 +12,16 @@ if (toggle && menu) {
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Competenze: toggle project thumbnails on click
+document.querySelectorAll('.facade-type').forEach(function(ft){
+  ft.addEventListener('click',function(e){
+    if(e.target.closest('.facade-type__thumb')) return; // let link work
+    var wasActive = ft.classList.contains('facade-type--active');
+    document.querySelectorAll('.facade-type--active').forEach(function(el){el.classList.remove('facade-type--active');});
+    if(!wasActive) ft.classList.add('facade-type--active');
+  });
+});
+
 // Carousel touch pause (mobile)
 document.querySelectorAll('.logo-carousel__track').forEach(function(track){
   track.addEventListener('touchstart',function(){track.style.animationPlayState='paused';},{passive:true});
@@ -49,7 +59,7 @@ if (header) {
   onScroll();
 }
 
-// Form validation + mailto to info@gpmontage.it
+// Form validation + mailto to info@gpmontage.ch
 const form = document.getElementById('contact-form');
 const statusEl = document.getElementById('form-status');
 
@@ -93,7 +103,7 @@ if (form) {
 
     if (!valid) return;
 
-    // Componi e invia email a info@gpmontage.it
+    // Componi e invia email a info@gpmontage.ch
     const subject = encodeURIComponent('Richiesta preventivo dal sito GP Montage');
     const body = encodeURIComponent(
       'Nome: ' + nome + '\n' +
@@ -101,7 +111,7 @@ if (form) {
       'Telefono: ' + (telefono || 'Non indicato') + '\n\n' +
       'Messaggio:\n' + messaggio
     );
-    window.location.href = 'mailto:info@gpmontage.it?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:info@gpmontage.ch?subject=' + subject + '&body=' + body;
 
     statusEl.textContent = 'Grazie! Si sta aprendo il tuo client email...';
     statusEl.style.color = 'var(--ok)';
