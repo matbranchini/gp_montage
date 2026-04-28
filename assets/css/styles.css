@@ -211,8 +211,11 @@ img{max-width:100%;height:auto}
   color:var(--muted);
   transition:color .3s ease,transform .3s ease;
   cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
 }
-.facade-type:hover{
+.facade-type:hover,
+.facade-type--active{
   color:var(--primary);
   transform:translateY(-6px);
 }
@@ -228,7 +231,8 @@ img{max-width:100%;height:auto}
   background:var(--surface);
   transition:border-color .3s ease,background .3s ease,box-shadow .3s ease;
 }
-.facade-type:hover .facade-type__icon{
+.facade-type:hover .facade-type__icon,
+.facade-type--active .facade-type__icon{
   border-color:var(--primary);
   background:rgba(64,186,184,.08);
   box-shadow:0 0 30px rgba(64,186,184,.15);
@@ -1040,7 +1044,7 @@ input:focus,textarea:focus{border-color:var(--primary)}
   .cards,.projects,.equip-grid,.training-grid{grid-template-columns:1fr}
   .facade-types__grid{gap:20px}
   .facade-type__icon{width:64px;height:64px;padding:13px}
-  .facade-type:hover{transform:none}
+  .facade-type:hover,.facade-type--active{transform:none}
   .facade-type__projects{
     position:relative;
     width:100%;

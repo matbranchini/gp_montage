@@ -13,16 +13,33 @@ if (toggle && menu) {
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Competenze: toggle project thumbnails on click/tap
-document.querySelectorAll('.facade-type').forEach(function(ft){
-  ft.addEventListener('click',function(e){
-    if(e.target.closest('.facade-type__thumb')) return; // let link work
-    e.preventDefault();
-    e.stopPropagation();
+(function(){
+  var types = document.querySelectorAll('.facade-type');
+  if(!types.length) return;
+  function toggle(ft){
     var wasActive = ft.classList.contains('facade-type--active');
-    document.querySelectorAll('.facade-type--active').forEach(function(el){el.classList.remove('facade-type--active');});
+    types.forEach(function(el){el.classList.remove('facade-type--active');});
     if(!wasActive) ft.classList.add('facade-type--active');
+  }
+  types.forEach(function(ft){
+    // Click for desktop
+    ft.addEventListener('click',function(e){
+      if(e.target.closest('.facade-type__thumb')) return;
+      e.preventDefault();
+      toggle(ft);
+    });
+    // Touch for mobile — fire on touchend to avoid scroll conflicts
+    var touchMoved = false;
+    ft.addEventListener('touchstart',function(){ touchMoved = false; },{passive:true});
+    ft.addEventListener('touchmove',function(){ touchMoved = true; },{passive:true});
+    ft.addEventListener('touchend',function(e){
+      if(touchMoved) return; // was a scroll, not a tap
+      if(e.target.closest('.facade-type__thumb')) return;
+      e.preventDefault();
+      toggle(ft);
+    });
   });
-});
+})();
 
 // Carousel touch pause (mobile)
 document.querySelectorAll('.logo-carousel__track').forEach(function(track){
