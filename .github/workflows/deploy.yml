@@ -24,8 +24,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./de/
-          server-dir: ./
+          server-dir: /www/
           log-level: verbose
           exclude: |
             **/.git*
