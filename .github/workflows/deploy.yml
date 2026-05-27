@@ -3,30 +3,33 @@ name: Deploy website
 on:
   push:
     branches:
-      - main   # usa master se necessario !
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout codice
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Verifica secrets
+      - name: Verifica file locali
         run: |
-          if [ -z "${{ secrets.FTP_SERVER }}" ]; then echo "FTP_SERVER vuoto!"; else echo "FTP_SERVER OK"; fi
-          if [ -z "${{ secrets.FTP_USERNAME }}" ]; then echo "FTP_USERNAME vuoto!"; else echo "FTP_USERNAME OK"; fi
-          if [ -z "${{ secrets.FTP_PASSWORD }}" ]; then echo "FTP_PASSWORD vuoto!"; else echo "FTP_PASSWORD OK"; fi
+          echo "Contenuto della cartella da deployare:"
+          ls -la ./de/
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./de/
-          server-dir: /public_html/
-
+          server-dir: ./
+          log-level: verbose
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.github/**
+            **/.vscode/**
