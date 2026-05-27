@@ -15,6 +15,12 @@ jobs:
       - name: Checkout codice
         uses: actions/checkout@v4
 
+      - name: Verifica secrets
+        run: |
+          if [ -z "${{ secrets.FTP_SERVER }}" ]; then echo "FTP_SERVER vuoto!"; else echo "FTP_SERVER OK"; fi
+          if [ -z "${{ secrets.FTP_USERNAME }}" ]; then echo "FTP_USERNAME vuoto!"; else echo "FTP_USERNAME OK"; fi
+          if [ -z "${{ secrets.FTP_PASSWORD }}" ]; then echo "FTP_PASSWORD vuoto!"; else echo "FTP_PASSWORD OK"; fi
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
