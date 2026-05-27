@@ -13,6 +13,17 @@ jobs:
       - name: Checkout codice
         uses: actions/checkout@v6
 
+      - name: Esplora cartelle FTP
+        run: |
+          echo "=== /sites/ ==="
+          curl -s --list-only "ftp://${{ secrets.FTP_SERVER }}/sites/" --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" 2>&1 || echo "non esiste"
+          echo "=== /sites/gpmontage.ch/ ==="
+          curl -s --list-only "ftp://${{ secrets.FTP_SERVER }}/sites/gpmontage.ch/" --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" 2>&1 || echo "non esiste"
+          echo "=== /sites/www.gpmontage.ch/ ==="
+          curl -s --list-only "ftp://${{ secrets.FTP_SERVER }}/sites/www.gpmontage.ch/" --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" 2>&1 || echo "non esiste"
+          echo "=== /httpdocs/ contenuto ==="
+          curl -s --list-only "ftp://${{ secrets.FTP_SERVER }}/httpdocs/" --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" 2>&1 || echo "non esiste"
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
