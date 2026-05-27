@@ -13,19 +13,6 @@ jobs:
       - name: Checkout codice
         uses: actions/checkout@v6
 
-      - name: Verifica file locali
-        run: |
-          echo "Contenuto della cartella da deployare:"
-          ls -la ./de/
-
-      - name: Lista cartelle FTP
-        run: |
-          curl -s --list-only ftp://${{ secrets.FTP_SERVER }}/ --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" || echo "Root fallita"
-          echo "---"
-          curl -s --list-only ftp://${{ secrets.FTP_SERVER }}/httpdocs/ --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" || echo "httpdocs fallita"
-          echo "---"
-          curl -s --list-only ftp://${{ secrets.FTP_SERVER }}/www/ --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" || echo "www fallita"
-
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
