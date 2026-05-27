@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Se il file/cartella richiesto esiste, servilo direttamente
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Altrimenti servi il contenuto dalla cartella /de/
+RewriteRule ^(.*)$ /de/$1 [L]
