@@ -18,13 +18,21 @@ jobs:
           echo "Contenuto della cartella da deployare:"
           ls -la ./de/
 
+      - name: Lista cartelle FTP
+        run: |
+          curl -s --list-only ftp://${{ secrets.FTP_SERVER }}/ --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" || echo "Root fallita"
+          echo "---"
+          curl -s --list-only ftp://${{ secrets.FTP_SERVER }}/httpdocs/ --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" || echo "httpdocs fallita"
+          echo "---"
+          curl -s --list-only ftp://${{ secrets.FTP_SERVER }}/www/ --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" || echo "www fallita"
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /httpdocs/
+          server-dir: /www/
           log-level: verbose
           exclude: |
             **/.git*
