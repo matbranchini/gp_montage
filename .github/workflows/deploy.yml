@@ -8,7 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: GP_MONTAGE_SECRET_NAME
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
