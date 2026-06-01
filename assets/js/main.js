@@ -254,3 +254,43 @@ if (certLightbox) {
     if (e.key === 'Escape' && certLightbox.classList.contains('show')) closeCert();
   });
 }
+
+// WIP ribbons on selected projects (Q34, Koch Areal, Fairmont)
+(function(){
+  const targets = ['q34.jpg', 'koch-areal.jpg', 'fairmont-hotel.jpg'];
+  const lang = (document.documentElement.getAttribute('lang') || 'en').toLowerCase();
+  const labels = {
+    it: 'Lavori in corso',
+    de: 'In Arbeit',
+    fr: 'Travaux en cours',
+    en: 'Work in Progress'
+  };
+  const label = labels[lang] || labels.en;
+
+  function isTargetImage(img){
+    const src = (img.getAttribute('src') || '').toLowerCase();
+    return targets.some(name => src.includes(name));
+  }
+
+  document.querySelectorAll('img').forEach(function(img){
+    if (!isTargetImage(img)) return;
+
+    const projectCard = img.closest('.project');
+    if (projectCard) {
+      projectCard.classList.add('project--wip');
+      projectCard.setAttribute('data-wip', label);
+    }
+
+    const galleryItem = img.closest('.gallery-strip__item');
+    if (galleryItem) {
+      galleryItem.classList.add('gallery-strip__item--wip');
+      galleryItem.setAttribute('data-wip', label);
+    }
+
+    const thumb = img.closest('.facade-type__thumb');
+    if (thumb) {
+      thumb.classList.add('facade-type__thumb--wip');
+      thumb.setAttribute('data-wip', label);
+    }
+  });
+})();
