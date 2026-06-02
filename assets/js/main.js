@@ -255,9 +255,9 @@ if (certLightbox) {
   });
 }
 
-// WIP ribbons on selected projects (Q34, Koch Areal, Fairmont)
+// WIP ribbons on selected projects (Koch Areal, Fairmont)
 (function(){
-  const targets = ['q34.jpg', 'koch-areal.jpg', 'fairmont-hotel.jpg'];
+  const targets = ['koch-areal.jpg', 'fairmont-hotel.jpg'];
   const lang = (document.documentElement.getAttribute('lang') || 'en').toLowerCase();
   const labels = {
     it: 'Lavori in corso',
