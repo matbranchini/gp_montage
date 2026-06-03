@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const translations = cookieTranslations[lang];
 
   CookieConsent.run({
+    autoShow: true,
     guiOptions: {
       consentModal: {
         layout: "box",
