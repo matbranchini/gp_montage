@@ -173,7 +173,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Certificazioni -->
+  <!-- Certificazioni  -->
   <url>
     <loc>https://www.gpmontage.ch/de/zertifizierungen.html</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/zertifizierungen.html"/>
