@@ -3,7 +3,7 @@ name: Deploy website
 # Controllo deploy su push:
 # - aggiungi [deploy] nel messaggio commit => esegue il deploy
 # - aggiungi [no-deploy] nel messaggio commit => salta il deploy
-# Se nessuno dei due tag è presente, il deploy viene saltato.
+# Se nessuno dei due tag è presente, il deploy viene  saltato.
 
 on:
   push:
