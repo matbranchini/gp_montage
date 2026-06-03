@@ -49,8 +49,20 @@ function getCurrentLanguage() {
 document.addEventListener('DOMContentLoaded', function () {
   const lang = getCurrentLanguage();
   const translations = cookieTranslations[lang];
+  const params = new URLSearchParams(window.location.search);
+  const contactPageByLanguage = {
+    it: 'contatti.html',
+    de: 'kontakt.html',
+    en: 'contact.html',
+    fr: 'contact.html'
+  };
+
+  if (params.has('reset-consent') && window.CookieConsent && typeof window.CookieConsent.reset === 'function') {
+    window.CookieConsent.reset(true);
+  }
 
   CookieConsent.run({
+    revision: 1,
     autoShow: true,
     guiOptions: {
       consentModal: {
@@ -108,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
               },
               {
                 title: "Maggiori informazioni",
-                description: `Per qualsiasi domanda in relazione alla nostra politica sui cookie e alle tue scelte, per favore <a class="cc__link" href="/${lang}/contatti.html">contattaci</a>.`
+                description: `Per qualsiasi domanda in relazione alla nostra politica sui cookie e alle tue scelte, per favore <a class="cc__link" href="/${lang}/${contactPageByLanguage[lang]}">contattaci</a>.`
               }
             ]
           }
