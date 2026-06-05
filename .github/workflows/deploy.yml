@@ -4,6 +4,10 @@ name: Deploy website
 # - aggiungi [deploy] nel messaggio commit => esegue il deploy
 # - aggiungi [no-deploy] nel messaggio commit => salta il deploy
 # Se nessuno dei due tag è presente, il deploy viene  saltato.
+# Connessione deploy configurabile da Repository Variables:
+# - FTP_PROTOCOL: ftp | ftps | ftps-legacy
+# - FTP_PORT: porta del server (es. 21, 990)
+# - FTP_SECURITY: strict | loose
 
 on:
   push:
@@ -25,6 +29,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftp' }}
+          port: ${{ vars.FTP_PORT || 21 }}
+          security: ${{ vars.FTP_SECURITY || 'strict' }}
           server-dir: /sites/gpmontage.ch/
           log-level: verbose
           exclude: |
