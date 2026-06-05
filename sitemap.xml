@@ -4,15 +4,6 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://www.gpmontage.ch/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/index.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/"/>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://www.gpmontage.ch/de/index.html</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/index.html"/>
@@ -27,6 +18,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/index.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/index.html"/>
     <priority>1.0</priority>
   </url>
   <url>
@@ -35,6 +27,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/index.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/index.html"/>
     <priority>1.0</priority>
   </url>
   <url>
@@ -43,6 +36,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/index.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/index.html"/>
     <priority>1.0</priority>
   </url>
 

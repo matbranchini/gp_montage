@@ -41,6 +41,17 @@ p,.section__intro{font-weight:400;letter-spacing:.01em}
 
 img{max-width:100%;height:auto}
 .hidden{display:none}
+.visually-hidden{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
 
 /* Accessibilità */
 .skip-link{
