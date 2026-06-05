@@ -3,7 +3,7 @@
 const cookieTranslations = {
   it: {
     title: "Questo sito web utilizza i cookie",
-    description: "Utilizziamo i cookie per personalizzare contenuti ed annunci, per fornire funzionalità dei social media e per analizzare il nostro traffico. Condividiamo inoltre informazioni sul modo in cui utilizza il nostro sito con i nostri partner che si occupano di analisi dei dati web, pubblicità e social media, i quali potrebbero combinarle con altre informazioni che ha fornito loro o che hanno raccolto dal suo utilizzo dei loro servizi.",
+    description: "Utilizziamo cookie tecnici essenziali per il funzionamento del sito e, solo con il tuo consenso, cookie analitici (Google Analytics) per misurare il traffico e migliorare i contenuti. Non utilizziamo cookie di profilazione o marketing.",
     acceptAllBtn: "Accetta tutti",
     acceptNecessaryBtn: "Rifiuta",
     showPreferencesBtn: "Gestisci preferenze",
@@ -11,7 +11,7 @@ const cookieTranslations = {
   },
   de: {
     title: "Diese Website verwendet Cookies",
-    description: "Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren, Funktionen für soziale Medien anbieten zu können und die Zugriffe auf unsere Website zu analysieren. Außerdem geben wir Informationen zu Ihrer Verwendung unserer Website an unsere Partner für soziale Medien, Werbung und Analysen weiter. Unsere Partner führen diese Informationen möglicherweise mit weiteren Daten zusammen, die Sie ihnen bereitgestellt haben oder die sie im Rahmen Ihrer Nutzung der Dienste gesammelt haben.",
+    description: "Wir verwenden technisch notwendige Cookies für den Betrieb der Website und – nur mit Ihrer Einwilligung – Analyse-Cookies (Google Analytics), um den Datenverkehr zu messen und Inhalte zu verbessern. Profiling- oder Marketing-Cookies werden nicht eingesetzt.",
     acceptAllBtn: "Alle akzeptieren",
     acceptNecessaryBtn: "Ablehnen",
     showPreferencesBtn: "Einstellungen verwalten",
@@ -19,7 +19,7 @@ const cookieTranslations = {
   },
   en: {
     title: "This website uses cookies",
-    description: "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.",
+    description: "We use essential technical cookies for website operation and, only with your consent, analytics cookies (Google Analytics) to measure traffic and improve content. We do not use profiling or marketing cookies.",
     acceptAllBtn: "Accept all",
     acceptNecessaryBtn: "Decline",
     showPreferencesBtn: "Manage preferences",
@@ -27,7 +27,7 @@ const cookieTranslations = {
   },
   fr: {
     title: "Ce site web utilise des cookies",
-    description: "Nous utilisons des cookies pour personnaliser le contenu et les publicités, pour fournir des fonctionnalités de médias sociaux et pour analyser notre trafic. Nous partageons également des informations sur votre utilisation de notre site avec nos partenaires de médias sociaux, de publicité et d'analyse, qui peuvent les combiner avec d'autres informations que vous leur avez fournies ou qu'ils ont collectées lors de votre utilisation de leurs services.",
+    description: "Nous utilisons des cookies techniques essentiels pour le fonctionnement du site et, uniquement avec votre consentement, des cookies analytiques (Google Analytics) pour mesurer le trafic et améliorer les contenus. Aucun cookie de profilage ou de marketing n’est utilisé.",
     acceptAllBtn: "Tout accepter",
     acceptNecessaryBtn: "Refuser",
     showPreferencesBtn: "Gérer les préférences",
