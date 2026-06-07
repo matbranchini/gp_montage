@@ -47,6 +47,23 @@ document.querySelectorAll('.logo-carousel__track').forEach(function(track){
   track.addEventListener('touchend',function(){track.style.animationPlayState='running';},{passive:true});
 });
 
+// Gallery strip: keep autoplay running on touch devices
+(function(){
+  if (!window.matchMedia || window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+
+  document.querySelectorAll('.gallery-strip__track').forEach(function(track){
+    function keepRunning(){
+      track.style.animationPlayState = 'running';
+    }
+
+    track.addEventListener('touchstart', keepRunning, { passive: true });
+    track.addEventListener('touchend', keepRunning, { passive: true });
+    track.addEventListener('pointerdown', keepRunning, { passive: true });
+    track.addEventListener('pointerup', keepRunning, { passive: true });
+    track.addEventListener('click', keepRunning, { passive: true });
+  });
+})();
+
 // Scroll indicator — click to scroll down to gallery (clear header)
 const scrollIndicator = document.querySelector('.hero-full__scroll');
 if (scrollIndicator) {
