@@ -190,6 +190,12 @@ img{max-width:100%;height:auto}
   opacity:1;
   transform:translateY(0);
 }
+@media (hover:none), (pointer:coarse){
+  .gallery-strip__item img,
+  .gallery-strip__caption{
+    pointer-events:none;
+  }
+}
 .gallery-strip__item--wip::before{
   content:attr(data-wip);
   position:absolute;
