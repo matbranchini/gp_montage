@@ -152,8 +152,10 @@ img{max-width:100%;height:auto}
   width:max-content;
   animation:galleryScroll 78s linear infinite;
 }
-.gallery-strip__track:hover{
-  animation-play-state:paused;
+@media (hover:hover) and (pointer:fine){
+  .gallery-strip__track:hover{
+    animation-play-state:paused;
+  }
 }
 .gallery-strip__item{
   position:relative;
