@@ -1,5 +1,13 @@
 RewriteEngine On
 
+# Canonical 301 redirects for root German URLs to /de/
+RewriteRule ^$ /de/index.html [R=301,L]
+RewriteRule ^projekte\.html$ /de/projekte.html [R=301,L]
+RewriteRule ^kontakt\.html$ /de/kontakt.html [R=301,L]
+RewriteRule ^zertifizierungen\.html$ /de/zertifizierungen.html [R=301,L]
+RewriteRule ^über-uns\.html$ /de/%C3%BCber-uns.html [R=301,L]
+RewriteRule ^ausrüstung\.html$ /de/ausr%C3%BCstung.html [R=301,L]
+
 # Se il file/cartella richiesto esiste, servilo direttamente
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
