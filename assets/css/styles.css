@@ -151,6 +151,7 @@ img{max-width:100%;height:auto}
   gap:8px;
   width:max-content;
   animation:galleryScroll 78s linear infinite;
+  will-change:transform;
 }
 @media (hover:hover) and (pointer:fine){
   .gallery-strip__track:hover{
@@ -865,6 +866,7 @@ input:focus,textarea:focus{border-color:var(--primary)}
   gap:clamp(32px,6vw,72px);
   width:max-content;
   animation:logoScroll var(--speed,30s) linear infinite;
+  will-change:transform;
 }
 .logo-carousel__track:hover{
   animation-play-state:paused;
