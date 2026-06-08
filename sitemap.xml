@@ -5,6 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.gpmontage.ch/de/index.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/index.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/index.html"/>
@@ -14,6 +15,7 @@
   </url>
   <url>
     <loc>https://www.gpmontage.ch/fr/index.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/index.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/index.html"/>
@@ -23,6 +25,7 @@
   </url>
   <url>
     <loc>https://www.gpmontage.ch/it/index.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/index.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/index.html"/>
@@ -32,6 +35,7 @@
   </url>
   <url>
     <loc>https://www.gpmontage.ch/en/index.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/index.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/index.html"/>
@@ -43,170 +47,210 @@
   <!-- Progetti -->
   <url>
     <loc>https://www.gpmontage.ch/de/projekte.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/projekte.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/projets.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/progetti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/projekte.html"/>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/fr/projets.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/projekte.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/projets.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/progetti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/projekte.html"/>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/it/progetti.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/projekte.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/projets.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/progetti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/projekte.html"/>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/en/projects.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/projekte.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/projets.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/progetti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/projekte.html"/>
     <priority>0.9</priority>
   </url>
 
   <!-- Chi siamo -->
   <url>
     <loc>https://www.gpmontage.ch/de/%C3%BCber-uns.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/%C3%BCber-uns.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/qui-sommes-nous.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/chi-siamo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/%C3%BCber-uns.html"/>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/fr/qui-sommes-nous.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/%C3%BCber-uns.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/qui-sommes-nous.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/chi-siamo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/%C3%BCber-uns.html"/>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/it/chi-siamo.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/%C3%BCber-uns.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/qui-sommes-nous.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/chi-siamo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/%C3%BCber-uns.html"/>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/en/about-us.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/%C3%BCber-uns.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/qui-sommes-nous.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/chi-siamo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/%C3%BCber-uns.html"/>
     <priority>0.7</priority>
   </url>
 
   <!-- Contatti -->
   <url>
     <loc>https://www.gpmontage.ch/de/kontakt.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/kontakt.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/contact.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/contatti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/kontakt.html"/>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/fr/contact.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/kontakt.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/contact.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/contatti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/kontakt.html"/>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/it/contatti.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/kontakt.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/contact.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/contatti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/kontakt.html"/>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/en/contact.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/kontakt.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/contact.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/contatti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/kontakt.html"/>
     <priority>0.8</priority>
   </url>
 
   <!-- Attrezzature -->
   <url>
     <loc>https://www.gpmontage.ch/de/ausr%C3%BCstung.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/ausr%C3%BCstung.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/equipements.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/attrezzature.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/equipment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/ausr%C3%BCstung.html"/>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/fr/equipements.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/ausr%C3%BCstung.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/equipements.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/attrezzature.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/equipment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/ausr%C3%BCstung.html"/>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/it/attrezzature.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/ausr%C3%BCstung.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/equipements.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/attrezzature.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/equipment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/ausr%C3%BCstung.html"/>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/en/equipment.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/ausr%C3%BCstung.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/equipements.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/attrezzature.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/equipment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/ausr%C3%BCstung.html"/>
     <priority>0.6</priority>
   </url>
 
-  <!-- Certificazioni  -->
+  <!-- Certificazioni -->
   <url>
     <loc>https://www.gpmontage.ch/de/zertifizierungen.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/zertifizierungen.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/certifications.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/certificazioni.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/certifications.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/zertifizierungen.html"/>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/fr/certifications.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/zertifizierungen.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/certifications.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/certificazioni.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/certifications.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/zertifizierungen.html"/>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/it/certificazioni.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/zertifizierungen.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/certifications.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/certificazioni.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/certifications.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/zertifizierungen.html"/>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.gpmontage.ch/en/certifications.html</loc>
+    <lastmod>2025-06-08</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.gpmontage.ch/de/zertifizierungen.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.gpmontage.ch/fr/certifications.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.gpmontage.ch/it/certificazioni.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gpmontage.ch/en/certifications.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gpmontage.ch/de/zertifizierungen.html"/>
     <priority>0.6</priority>
   </url>
 
