@@ -1,3 +1,8 @@
+// Preview-only content ([data-preview]) stays hidden on the production domain
+if (!/(^|\.)gpmontage\.ch$/i.test(location.hostname)) {
+  document.documentElement.classList.add('is-preview');
+}
+
 // Mobile nav
 const toggle = document.querySelector('.nav__toggle');
 const menu = document.getElementById('menu');

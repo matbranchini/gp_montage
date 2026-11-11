@@ -1354,3 +1354,11 @@ input:focus,textarea:focus{border-color:var(--primary)}
   .modal__body{padding:24px 20px 28px}
   .gallery-strip__track{animation-duration:66.3s}
 }
+
+/* Preview-only content: visible only when main.js adds .is-preview (non-production hosts) */
+html:not(.is-preview) [data-preview]{display:none !important}
+/* 12 gallery items instead of 9: scale duration to keep the same scroll speed */
+html.is-preview .gallery-strip__track{animation-duration:104s}
+@media(max-width:640px){
+  html.is-preview .gallery-strip__track{animation-duration:88.4s}
+}
