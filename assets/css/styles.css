@@ -150,7 +150,7 @@ img{max-width:100%;height:auto}
   display:flex;
   gap:8px;
   width:max-content;
-  animation:galleryScroll 78s linear infinite;
+  animation:galleryScroll 104s linear infinite;
   will-change:transform;
 }
 @media (hover:hover) and (pointer:fine){
@@ -1352,14 +1352,9 @@ input:focus,textarea:focus{border-color:var(--primary)}
 }
 @media(max-width:640px){
   .modal__body{padding:24px 20px 28px}
-  .gallery-strip__track{animation-duration:66.3s}
+  .gallery-strip__track{animation-duration:88.4s}
 }
 
 /* Preview-only content: visible only when main.js adds .is-preview (non-production hosts) */
 html:not(.is-preview) [data-preview]{display:none !important}
 html.is-preview [data-prod-only]{display:none !important}
-/* 12 gallery items instead of 9: scale duration to keep the same scroll speed */
-html.is-preview .gallery-strip__track{animation-duration:104s}
-@media(max-width:640px){
-  html.is-preview .gallery-strip__track{animation-duration:88.4s}
-}
